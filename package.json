@@ -1,0 +1,17 @@
+{
+  "name": "tws-med-tech",
+  "version": "1.0.0",
+  "description": "- A TWSMedTech é uma plataforma de telemedicina especializada em cardiologia, projetada para cardiologistas particulares, oferecendo consultas online seguras e eficientes para otimizar o atendimento ao paciente e a gestão da prática médica.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0"
+  }
+}
