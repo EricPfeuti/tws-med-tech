@@ -1,0 +1,57 @@
+.flex{
+    display: flex;
+}
+
+header{
+    padding: 40px 8%;
+}
+
+main{
+    color: #000;
+    font-family: "Poppins", sans-serif;
+}
+
+header .nav-link{
+    font-weight: 530;
+    font-size: 18px;
+}
+
+section.topo-do-site{
+    padding: 80px 8%;
+}
+
+.img-topo-site img{
+    width: 480px;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.topo-do-site h1{
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 650;
+}
+
+.topo-do-site .txt-topo-site p{
+    margin: 20px 0;
+}
+
+footer{
+    padding: 40px 8%;
+    background-color: #FF0000;
+}
+
+footer .flex{
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1080px) {
+    .flex{
+        flex-direction: column;
+    }
+}
