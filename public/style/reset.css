@@ -5,10 +5,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: 0;
 }
 
 span{
     color: #FF0000;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 #btn-conhecer button{
@@ -45,4 +50,25 @@ span{
 
 #btn-entrar button i{
     font-size: 1.3rem;
+}
+
+#btn-saiba-mais button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #007FFF;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+    width: 100%;
+}
+
+#btn-saiba-mais a{
+    text-decoration: none;
 }

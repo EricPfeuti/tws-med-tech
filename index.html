@@ -25,7 +25,9 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <img src="images/logoTWSMedTechPreto.png" alt="logo" id="logoNormal">
+                <div class="img-header">
+                    <a href="#"><img src="images/logoTWSMedTechPreto.png" alt="logo" id="logoNormal"></a>
+                </div>
                 <button id="btn-menu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Serviços</a>
+                            <a class="nav-link" aria-current="page" href="#servicos">Serviços</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Quem Somos</a>
@@ -44,15 +46,14 @@
                         </li>
                     </ul>
                     <div id="btn-entrar">
-                    <a href="#">
-                        <button><i class="bi bi-person-fill"></i> Entrar</button>
-                    </a>
+                        <a href="#">
+                            <button><i class="bi bi-person-fill"></i> Entrar</button>
+                        </a>
+                    </div>
                 </div>
-                </div>
-                
             </div>
         </nav>
-    </header><br>
+    </header><br><br>
 
     <main>
         <section id="topo-do-site" class="topo-do-site">
@@ -64,7 +65,7 @@
                             Aqui você terá uma pré versão do que será a plataforma, neste momento com teleconsultas e
                             histórico do chat da sua teleconsulta.</p>
                         <div id="btn-conhecer">
-                            <a href="#">
+                            <a href="#servicos">
                                 <button type="button">CONHECER</button>
                             </a>
                         </div>
@@ -74,6 +75,72 @@
                     </div>
                 </div>
             </div><br><br><br>
+        </section>
+
+        <section id="servicos" class="servicos">
+            <h1 id="titulo">NOSSOS <span>SERVIÇOS</span>.</h1><br><br>
+            <div class="container-grid-cards-servicos">
+                <div class="card">
+                    <div class="bg">
+                        <h2>Teleconsultas</h2>
+                        <p>Reuniões em tempo real com médicos cardiologistas.</p>
+                        <div class="circles">
+                            <div class="circle">
+                                Consulta médica
+                            </div>
+                            <div class="circle">
+                                Videoconferência
+                            </div>
+                            <div class="circle">
+                                Tecnologia
+                            </div>
+                        </div>
+                    </div><br>
+                    <div id="btn-saiba-mais">
+                        <a href="#"><button>SAIBA MAIS</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="bg">
+                        <h2>Chat disponível</h2>
+                        <p>Chat disponível entre médico e paciente.</p>
+                        <div class="circles">
+                            <div class="circle">
+                                Bate-papo
+                            </div>
+                            <div class="circle">
+                                Cliente
+                            </div>
+                            <div class="circle">
+                                Atendimento
+                            </div>
+                        </div>
+                    </div><br>
+                    <div id="btn-saiba-mais">
+                        <a href="#"><button>SAIBA MAIS</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="bg">
+                        <h2>Histórico do chat</h2>
+                        <p>Histórico do chat disponível, entre outras funcionalidades.</p>
+                        <div class="circles">
+                            <div class="circle">
+                                Registro
+                            </div>
+                            <div class="circle">
+                                Armazenamento
+                            </div>
+                            <div class="circle">
+                                Mensagens
+                            </div>
+                        </div>
+                    </div><br>
+                    <div id="btn-saiba-mais">
+                        <a href="#"><button>SAIBA MAIS</button></a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
