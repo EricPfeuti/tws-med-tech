@@ -72,3 +72,20 @@ html{
 #btn-saiba-mais a{
     text-decoration: none;
 }
+
+.btn-social button{
+    border: none;
+    background-color: #FF0000;
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    font-size: 40px;
+    margin: 0;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.btn-social button:hover{
+    background: #25552f;
+}

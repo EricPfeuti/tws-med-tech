@@ -1,16 +1,16 @@
 /* GERAL */
-.flex{
+.flex {
     display: flex;
 }
 
-#titulo{
+#titulo {
     font-size: clamp(2rem, 10vw, 3.5rem);
     text-align: center;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 /* HEADER */
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,75 +21,75 @@ header{
     background-color: #fff;
 }
 
-header .nav-link{
+header .nav-link {
     font-weight: 530;
     font-size: 18px;
 }
 
 /* MAIN */
-main{
+main {
     color: #000;
     font-family: "Poppins", sans-serif;
 }
 
 /* TOPO do SITE */
-section.topo-do-site{
+section.topo-do-site {
     min-height: 100vh;
     padding: 180px 8%;
 }
 
-.img-topo-site img{
+.img-topo-site img {
     width: 480px;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 70px;
 }
 
-.topo-do-site h1{
+.topo-do-site h1 {
     font-size: 38px;
     line-height: 50px;
     font-weight: 650;
 }
 
-.topo-do-site .txt-topo-site p{
+.topo-do-site .txt-topo-site p {
     margin: 20px 0;
 }
 
 /* SERVIÇOS */
-section.servicos{
+section.servicos {
     min-height: 100vh;
     padding: 180px 8%;
 }
 
-.servicos .container-grid-cards-servicos{
+.servicos .container-grid-cards-servicos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 380px);
+    grid-template-columns: repeat(auto-fit, 350px);
     justify-content: center;
-    padding: 2rem 4%;
     gap: 40px;
 }
 
 /* SERVICOS - Cards */
-.servicos .container-grid-cards-servicos .card{
+.servicos .container-grid-cards-servicos .card {
     padding: 1rem;
     border-radius: 5px;
     background-color: #F3F3F3;
     border: 0;
 }
 
-.servicos .container-grid-cards-servicos .card h2{
+.servicos .container-grid-cards-servicos .card h2 {
     font-weight: 550;
     color: #000;
 }
-.servicos .container-grid-cards-servicos .card .bg{
+
+.servicos .container-grid-cards-servicos .card .bg {
     background-color: #fff;
     padding: 1rem;
 }
 
-.servicos .container-grid-cards-servicos .card .circles{
+.servicos .container-grid-cards-servicos .card .circles {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -97,7 +97,7 @@ section.servicos{
     gap: 16px;
 }
 
-.servicos .container-grid-cards-servicos .card .circle{
+.servicos .container-grid-cards-servicos .card .circle {
     background: #8CB0FF;
     padding: 0.5rem;
     border-radius: 20px;
@@ -105,19 +105,81 @@ section.servicos{
     font-weight: 500;
 }
 
+/* QUEM SOMOS */
+section.quem-somos {
+    min-height: 100vh;
+    padding: 180px 8%;
+}
+
+.container-team {
+    width: 100%;
+    padding: 40px 4%;
+}
+
+.quem-somos .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.container-team .membro {
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.container-team .membro img {
+    margin-bottom: 10px;
+    margin-right: 50px;
+    width: 300px;
+}
+
+.container-team .membro h2 {
+    margin-bottom: 8px;
+    font-weight: 550;
+}
+
 /* FOOTER */
-footer{
+footer {
     padding: 40px 8%;
     background-color: #FF0000;
 }
 
-footer .flex{
+footer .flex {
     justify-content: space-between;
     align-items: center;
 }
 
 @media screen and (max-width: 1080px) {
-    .flex{
+    .flex {
         flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+        padding: 40px 0%;
+    }
+
+    /* MAIN */
+
+    /* TOPO */
+    .img-topo-site img {
+        display: none;
+    }
+
+    /* SERVIÇOS */
+    .servicos .container-grid-cards-servicos .card {
+        
+    }
+
+    /* QUEM SOMOS */
+    .container-team .membro img {
+        margin-bottom: 10px;
+        margin-right: 50px;
+        width: 250px;
     }
 }
