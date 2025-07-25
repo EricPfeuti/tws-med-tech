@@ -132,14 +132,20 @@ section.quem-somos {
     transition: transform 0.3s, background 0.3s;
 }
 
-.container-team .membro img {
+.container-team .membro #imgEsquerda {
     margin-bottom: 10px;
     margin-right: 50px;
     width: 300px;
 }
 
+.container-team .membro #imgDireita {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
 .container-team .membro h2 {
     margin-bottom: 8px;
+    font-size: 24px;
     font-weight: 550;
 }
 
