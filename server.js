@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+// PÁGINA OPTION
+app.get('/option', (req, res) => {
+    res.sendFile(__dirname + '/pages/escolhaLogin.html');
+});
+
 app.listen(port, () => {
     console.log(`Servidor Node.js em execução em http://localhost:${port}`);
 });

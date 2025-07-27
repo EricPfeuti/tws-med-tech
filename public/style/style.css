@@ -9,23 +9,6 @@
     font-weight: 600;
 }
 
-/* HEADER */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    padding: 40px 8%;
-    transition: all .50s ease;
-    background-color: #fff;
-}
-
-header .nav-link {
-    font-weight: 530;
-    font-size: 18px;
-}
-
 /* MAIN */
 main {
     color: #000;
@@ -149,6 +132,22 @@ section.quem-somos {
     font-weight: 550;
 }
 
+/* CARDS-ESCOLHA-LOGIN */
+section.cards-escolha{
+    padding: 180px 8%;
+    min-height: 100vh;
+}
+
+section.cards-escolha .card{
+    text-align: center;
+}
+
+section.cards-escolha .card i{
+    font-size: 50px;
+    color: #FF0000;
+    text-align: center;
+}
+
 /* FOOTER */
 footer {
     padding: 40px 8%;
@@ -165,21 +164,11 @@ footer .flex {
         flex-direction: column;
     }
 
-    /* HEADER */
-    header {
-        padding: 40px 0%;
-    }
-
     /* MAIN */
 
     /* TOPO */
     .img-topo-site img {
         display: none;
-    }
-
-    /* SERVIÇOS */
-    .servicos .container-grid-cards-servicos .card {
-        
     }
 
     /* QUEM SOMOS */

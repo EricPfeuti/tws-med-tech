@@ -1,0 +1,26 @@
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 40px 8%;
+    transition: all .50s ease;
+    background-color: #fff;
+}
+
+header .nav-link {
+    font-weight: 530;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    /* HEADER */
+    header {
+        padding: 40px 0%;
+    }
+
+}
