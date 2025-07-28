@@ -18,6 +18,16 @@ app.get('/option', (req, res) => {
     res.sendFile(__dirname + '/pages/escolhaLogin.html');
 });
 
+// PÁGINA CADASTRO MÉDICO
+app.get('/cadastroMedico', (req, res) => {
+    res.sendFile(__dirname + '/pages/cadastroMedico.html');
+});
+
+// PÁGINA LOGIN MÉDICO
+app.get('/loginMedico', (req, res) => {
+    res.sendFile(__dirname + '/pages/loginMedico.html');
+});
+
 app.listen(port, () => {
     console.log(`Servidor Node.js em execução em http://localhost:${port}`);
 });
