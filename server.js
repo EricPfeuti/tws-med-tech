@@ -23,6 +23,11 @@ app.get('/cadastroMedico', (req, res) => {
     res.sendFile(__dirname + '/pages/cadastroMedico.html');
 });
 
+// PÁGINA CADASTRO PACIENTE
+app.get('/cadastroPaciente', (req, res) => {
+    res.sendFile(__dirname + '/pages/cadastroPaciente.html');
+});
+
 // PÁGINA LOGIN MÉDICO
 app.get('/loginMedico', (req, res) => {
     res.sendFile(__dirname + '/pages/loginMedico.html');
