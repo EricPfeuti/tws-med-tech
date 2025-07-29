@@ -33,6 +33,11 @@ app.get('/loginMedico', (req, res) => {
     res.sendFile(__dirname + '/pages/loginMedico.html');
 });
 
+// PÁGINA LOGIN PACIENTE
+app.get('/loginPaciente', (req, res) => {
+    res.sendFile(__dirname + '/pages/loginPaciente.html');
+});
+
 app.listen(port, () => {
     console.log(`Servidor Node.js em execução em http://localhost:${port}`);
 });

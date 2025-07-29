@@ -148,6 +148,16 @@ section.cards-escolha .card i{
     text-align: center;
 }
 
+/* FORMULARIO */
+section.formularioLogin {
+    padding: 180px 8%;
+    min-height: 100vh;
+}
+
+section.formularioLogin p{
+    text-align: center;
+}
+
 /* FOOTER */
 footer {
     padding: 40px 8%;

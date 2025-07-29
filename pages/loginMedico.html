@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha de Login - TWSMedTech</title>
+    <title>Login Médico - TWSMedTech</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style/reset.css">
@@ -19,7 +19,6 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <link rel="shortcut icon" href="images/logoMiniaturaTWSMedTech.png" type="image/x-icon">
-
 </head>
 
 <body>
@@ -44,7 +43,7 @@
                             <a class="nav-link" href="/">Quem Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cadastroMedico">Área do Médico</a>
+                            <a class="nav-link" href="#">Área do Médico</a>
                         </li>
                     </ul>
                     <div id="btn-entrar">
@@ -58,37 +57,28 @@
     </header><br><br>
 
     <main>
-        <section class="cards-escolha" id="cards-escolha">
-            <h1 id="titulo">ESCOLHA UMA OPÇÃO DE <span>LOGIN</span>.</h1><br><br>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <i class="bi bi-heart-pulse-fill"></i>
-                            <h5 class="card-title">Área do Médico</h5>
-                            <div id="btn-vermelho">
-                                <a href="/cadastroMedico">
-                                    <button type="button">CADASTRAR</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <i class="bi bi-bandaid-fill"></i>
-                            <h5 class="card-title">Área do Paciente</h5>
-                            <div id="btn-vermelho">
-                                <a href="/cadastroPaciente">
-                                    <button type="button">CADASTRAR</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="formularioLogin" id="formularioLogin">
+            <h1 id="titulo">LOGIN de <span>MÉDICO</span>.</h1>
+            <p>Não possui uma conta? <a href="/cadastroMedico">Cadastrar</a></p>
 
-            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Informe seu email:">
+                    <div id="emailHelp" class="form-text">Seu email nunca será compartilhado com mais ninguém.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Digite sua senha:">
+                </div>
+                <div id="btn-vermelho" style="text-align: center;">
+                    <a href="#">
+                        <button type="button">LOGIN</button>
+                    </a>
+                </div>
+            </form>
         </section>
     </main>
 
@@ -96,7 +86,7 @@
         <div class="interface">
             <div class="flex">
                 <div class="img-footer">
-                    <a href="/"><img src="images/logoTWSMedTechBranco.png" alt="logoTWSMedTechBranco"></a>
+                    <a href="#"><img src="images/logoTWSMedTechBranco.png" alt="logoTWSMedTechBranco"></a>
                 </div>
             </div>
         </div>
