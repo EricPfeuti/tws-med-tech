@@ -47,7 +47,7 @@ app.post('/cadastroMedico', async (req, res) => {
         const medicoExistente = await collectionMedicos.findOne({ nomeMedico: req.body.nomeMedico });
 
         if (medicoExistente) {
-            res.send('Aluno já existe! Tente outro nome de usuário.');
+            res.send('Médico já existe! Tente outro nome de usuário.');
         } else {
             const senhaCriptografada = await bcrypt.hash(req.body.senhaMedico, 10);
 

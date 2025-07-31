@@ -158,6 +158,12 @@ section.formularioLogin p{
     text-align: center;
 }
 
+/* FUNCIONALIDADES */
+section.funcionalidades{
+    padding: 180px 8%;
+    min-height: 100vh;
+}
+
 /* FOOTER */
 footer {
     padding: 40px 8%;

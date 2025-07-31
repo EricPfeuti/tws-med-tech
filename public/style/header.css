@@ -15,6 +15,34 @@ header .nav-link {
     font-size: 18px;
 }
 
+#btn-entrar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #FF0000;
+    border-radius: 5px;
+    border: 0;
+    transition: .2s;
+    color: #fff;
+    cursor: pointer;
+}
+
+#btn-entrar a{
+    text-decoration: none;
+}
+
+#btn-entrar button i{
+    font-size: 1.3rem;
+}
+
+#btn-conta i{
+    color: #FF0000;
+    font-size: 40px;
+}
 
 @media screen and (max-width: 1080px) {
 
