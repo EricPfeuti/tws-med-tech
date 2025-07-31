@@ -61,22 +61,17 @@
             <h1 id="titulo">LOGIN de <span>MÉDICO</span>.</h1>
             <p>Não possui uma conta? <a href="/cadastroMedico">Cadastrar</a></p>
 
-            <form>
+            <form action="/loginMedico" method="POST">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Informe seu email:">
-                    <div id="emailHelp" class="form-text">Seu email nunca será compartilhado com mais ninguém.</div>
+                    <label for="nomeMedico" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nomeMedico" name="nomeMedico" placeholder="Informe seu email:">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Digite sua senha:">
+                    <label for="senhaMedico" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senhaMedico" name="senhaMedico" placeholder="Digite sua senha:">
                 </div>
                 <div id="btn-vermelho" style="text-align: center;">
-                    <a href="#">
-                        <button type="button">LOGIN</button>
-                    </a>
+                    <button type="submit">LOGIN</button>
                 </div>
             </form>
         </section>
