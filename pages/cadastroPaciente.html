@@ -61,19 +61,17 @@
             <h1 id="titulo">CADASTRO de <span>PACIENTE</span>.</h1>
             <p>Já possui uma conta? <a href="/loginPaciente">Entrar</a></p>
 
-            <form>
+            <form action="cadastroPaciente" method="POST"> 
                 <div class="mb-3">
                     <label for="nomePaciente" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nomePaciente" placeholder="Informe seu email:">
+                    <input type="text" class="form-control" id="nomePaciente" name="nomePaciente" placeholder="Informe seu email:">
                 </div>
                 <div class="mb-3">
                     <label for="senhaPaciente" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="senhaPaciente" placeholder="Digite sua senha:">
+                    <input type="password" class="form-control" id="senhaPaciente" name="senhaPaciente" placeholder="Digite sua senha:">
                 </div>
                 <div id="btn-vermelho" style="text-align: center;">
-                    <a href="#">
-                        <button type="button">CADASTRAR</button>
-                    </a>
+                    <button type="submit">CADASTRAR</button>
                 </div>
             </form>
         </section>

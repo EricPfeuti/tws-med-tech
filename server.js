@@ -70,6 +70,36 @@ app.get('/cadastroPaciente', (req, res) => {
     res.sendFile(__dirname + '/pages/cadastroPaciente.html');
 });
 
+// CADASTRO PACIENTE
+app.post('/cadastroPaciente', async (req, res) => {
+    const client = new MongoClient(url, { useUnifiedTopology: true });
+
+    try {
+        await client.connect();
+        const banco = client.db(TWSMedTech);
+        const collectionPacientes = banco.collection('pacientes');
+
+        const pacienteExistente = await collectionPacientes.findOne({ nomePaciente: req.body.nomePaciente });
+
+        if (pacienteExistente) {
+            res.send('Paciente já existe! Tente outro nome de usuário.');
+        } else {
+            const senhaCriptografada = await bcrypt.hash(req.body.senhaPaciente, 10);
+
+            await collectionPacientes.insertOne({
+                nomePaciente: req.body.nomePaciente,
+                senhaPaciente: senhaCriptografada
+            });
+
+            res.redirect('/loginPaciente');
+        }
+    } catch (erro){
+        res.send('Erro ao registrar paciente.');
+    } finally {
+        client.close();
+    }
+});
+
 // PÁGINA LOGIN MÉDICO
 app.get('/loginMedico', (req, res) => {
     res.sendFile(__dirname + '/pages/loginMedico.html');
@@ -104,9 +134,38 @@ app.get('/loginPaciente', (req, res) => {
     res.sendFile(__dirname + '/pages/loginPaciente.html');
 });
 
-// PÁGINA LOGIN PACIENTE
+// LOGIN PACIENTE
+app.post('/loginPaciente', async (req, res) => {
+    const client = new MongoClient(url, { useUnifiedTopology: true });
+
+    try{
+        await client.connect();
+        const banco = client.db(TWSMedTech);
+        const collectionPacientes = banco.collection('pacientes');
+
+        const paciente = await collectionPacientes.findOne({ nomePaciente: req.body.nomePaciente });
+
+        if (paciente && await bcrypt.compare(req.body.senhaPaciente, paciente.senhaPaciente)){
+            req.session.nomePaciente = req.body.nomePaciente;
+            res.redirect('/paciente');
+        } else {
+            res.redirect('/erro');
+        }
+    } catch (erro) {
+        res.send('Erro ao realizar login.');
+    } finally {
+        client.close();
+    }
+});
+
+// PÁGINA MÉDICO
 app.get('/medico', (req, res) => {
     res.sendFile(__dirname + '/pages/medico.html');
+});
+
+// PÁGINA PACIENTE
+app.get('/paciente', (req, res) => {
+    res.sendFile(__dirname + '/pages/paciente.html');
 });
 
 app.listen(port, () => {
