@@ -158,13 +158,31 @@ app.post('/loginPaciente', async (req, res) => {
     }
 });
 
+// PROTEGER ROTA MÉDICO
+function protegerRotaMedico(req, res, proximo){
+    if (req.session.nomeMedico) {
+        proximo();
+    } else {
+        res.redirect('/loginMedico');
+    }
+}
+
 // PÁGINA MÉDICO
-app.get('/medico', (req, res) => {
+app.get('/medico', protegerRotaMedico,  (req, res) => {
     res.sendFile(__dirname + '/pages/medico.html');
 });
 
+// PROTEGER ROTA PACIENTE
+function protegerRotaPaciente(req, res, proximo){
+    if (req.session.nomePaciente) {
+        proximo();
+    } else {
+        res.redirect('/loginPaciente');
+    }
+}
+
 // PÁGINA PACIENTE
-app.get('/paciente', (req, res) => {
+app.get('/paciente', protegerRotaPaciente, (req, res) => {
     res.sendFile(__dirname + '/pages/paciente.html');
 });
 
